@@ -315,6 +315,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 800px;
   width: 100%;
 }
+
+.qbootstrap-cover {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 100% !important;
+}
 @media screen and (max-width: 768px) {
   .qbootstrap-cover,
   .qbootstrap-hero {
