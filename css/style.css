@@ -11,6 +11,13 @@
 *	Edit this section
 *
 * ======================================================= */
+
+.oooh-baby-regular {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 400;
@@ -24,13 +31,13 @@ body {
 }
 
 a {
-  color: #FF847C;
+  color: #e66a3e;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #FF847C;
+  color: #e66a3e;
   outline: none;
 }
 
@@ -40,7 +47,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Clicker Script", cursive;
+  font-family: "Oooh Baby", cursive;
   font-weight: 400;
 }
 
@@ -77,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   }
   #qbootstrap-header .navbar-brand {
-    color: #FF847C !important;
+    color: #e66a3e !important;
   }
   #qbootstrap-header #navbar li a {
     color: rgba(0, 0, 0, 0.5) !important;
@@ -86,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
   }
   #qbootstrap-header #navbar li a:hover {
-    color: #FF847C !important;
+    color: #e66a3e !important;
   }
   #qbootstrap-header #navbar li a span:before {
     background: transparent !important;
@@ -94,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   #qbootstrap-header #navbar li.active a {
     background: transparent;
     background: none;
-    color: #FF847C !important;
+    color: #e66a3e !important;
   }
   #qbootstrap-header #navbar li.active a span:before {
     visibility: visible;
@@ -123,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #FF847C;
+  background-color: #e66a3e;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -163,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 34px;
   padding-left: 0;
   color: #fff;
-  font-family: "Clicker Script", cursive;
+  font-family: "Oooh Baby", cursive;
 }
 #qbootstrap-header.navbar-fixed-top {
   position: fixed !important;
@@ -176,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 #qbootstrap-header.navbar-fixed-top .navbar-brand {
-  color: #FF847C;
+  color: #e66a3e;
 }
 #qbootstrap-header.navbar-fixed-top #navbar li a {
   color: rgba(0, 0, 0, 0.5);
@@ -185,12 +192,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #qbootstrap-header.navbar-fixed-top #navbar li a:hover {
-  color: #FF847C;
+  color: #e66a3e;
 }
 #qbootstrap-header.navbar-fixed-top #navbar li.active a {
   background: transparent;
   background: none;
-  color: #FF847C;
+  color: #e66a3e;
 }
 #qbootstrap-header.navbar-fixed-top #navbar li.active a span:before {
   visibility: visible;
@@ -219,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #adadad;
 }
 #qbootstrap-header .navbar-default .brand-slogan em {
-  color: #FF847C;
+  color: #e66a3e;
   font-style: normal;
 }
 #qbootstrap-header a {
@@ -246,11 +253,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 .section-heading.colored .svg {
-  fill: #FF847C;
+  fill: #e66a3e;
 }
 .section-heading h2 {
   font-size: 80px;
-  color: #FF847C;
+  color: #e66a3e;
   display: block;
   padding-bottom: 20px;
   line-height: 1.5;
@@ -503,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #qbootstrap-slider-hero .flexslider .flex-control-nav li a.flex-active {
   cursor: pointer;
-  background: #ff847c;
+  background: #e66a3e;
 }
 #qbootstrap-slider-hero .flexslider .flex-direction-nav {
   display: none;
@@ -607,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
 #qbootstrap-slider-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
-  background: #FF847C !important;
+  background: #e66a3e !important;
   -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
   -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
   box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
@@ -622,8 +629,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #qbootstrap-couple h3 {
   font-size: 34px;
-  font-family: "Clicker Script", cursive;
-  color: #FF847C;
+  font-family: "Oooh Baby", cursive;
+  color: #e66a3e;
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-couple h3 {
@@ -631,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #qbootstrap-couple span {
-  color: #FF847C;
+  color: #e66a3e;
   letter-spacing: 10px;
   text-transform: uppercase;
   font-size: 14px;
@@ -641,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-couple .amp-center {
   font-size: 60px;
   margin-top: 100%;
-  color: #ff847c;
+  color: #e66a3e;
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-couple .amp-center {
@@ -649,7 +656,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #qbootstrap-couple .amp-center .colored .svg {
-  fill: #FF847C;
+  fill: #e66a3e;
 }
 
 .qbootstrap-bg {
@@ -706,7 +713,7 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-countdown .countdown span {
   margin: 0 30px;
   display: inline-block;
-  font-family: "Clicker Script", cursive;
+  font-family: "Oooh Baby", cursive;
 }
 #qbootstrap-countdown .countdown small {
   display: block;
@@ -767,7 +774,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 .couple .desc h2 {
-  color: #FF847C;
+  color: #e66a3e;
   font-size: 40px;
   margin-bottom: 30px;
 }
@@ -915,7 +922,7 @@ h1, h2, h3, h4, h5, h6 {
 .timeline-title {
   margin-top: 0;
   font-size: 34px;
-  color: #FF847C;
+  color: #e66a3e;
   margin-bottom: 30px;
 }
 
@@ -978,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #qbootstrap-testimonials {
-  background: #FF847C;
+  background: #e66a3e;
   z-index: 0;
 }
 #qbootstrap-testimonials .overlay {
@@ -1054,7 +1061,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 56px;
   height: 56px;
   margin-top: -30px;
-  background: #FF847C;
+  background: #e66a3e;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1089,7 +1096,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 0;
   font-size: 30px;
-  font-family: "Clicker Script", cursive;
+  font-family: "Oooh Baby", cursive;
   font-style: italic;
 }
 #qbootstrap-testimonials .arrow-thumb {
@@ -1133,7 +1140,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .groom-men h3 {
-  font-family: "Clicker Script", cursive;
+  font-family: "Oooh Baby", cursive;
   font-size: 28px;
 }
 
@@ -1170,7 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wedding-events .desc h3 {
   font-size: 40px;
-  color: #FF847C;
+  color: #e66a3e;
   display: block;
   margin-bottom: 40px;
 }
@@ -1197,7 +1204,7 @@ h1, h2, h3, h4, h5, h6 {
 .wedding-events .desc .icon i {
   color: #fff;
   padding: 15px;
-  background: #FF847C;
+  background: #e66a3e;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1285,7 +1292,7 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-started .btn {
   height: 54px;
   border: none !important;
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1394,7 +1401,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   height: 2px;
   width: 30px;
-  background: #FF847C;
+  background: #e66a3e;
 }
 #qbootstrap-press .qbootstrap-press-item .qbootstrap-press-img {
   position: absolute;
@@ -1420,7 +1427,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 .qbootstrap-nav-toggle.active i::before, .qbootstrap-nav-toggle.active i::after {
-  background: #FF847C;
+  background: #e66a3e;
 }
 .qbootstrap-nav-toggle:hover, .qbootstrap-nav-toggle:focus, .qbootstrap-nav-toggle:active {
   outline: none;
@@ -1434,18 +1441,18 @@ h1, h2, h3, h4, h5, h6 {
   *display: inline;
   width: 25px;
   height: 3px;
-  color: #FF847C;
+  color: #e66a3e;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #FF847C;
+  background: #e66a3e;
   transition: all .2s ease-out;
 }
 .qbootstrap-nav-toggle i::before, .qbootstrap-nav-toggle i::after {
   content: '';
   width: 25px;
   height: 3px;
-  background: #FF847C;
+  background: #e66a3e;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -1552,14 +1559,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 .btn.btn-primary {
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
 }
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
   box-shadow: none;
-  background: #FF847C;
+  background: #e66a3e;
 }
 .btn:hover, .btn:active, .btn:focus {
   background: #393e46 !important;
@@ -1599,11 +1606,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 .social li a.social-box {
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
 }
 .social li a.social-circle {
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1614,11 +1621,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #393e46 !important;
 }
 .social.social-box a {
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
 }
 .social.social-circle a {
-  background: #FF847C;
+  background: #e66a3e;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1677,7 +1684,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #FF847C;
+  border-color: #e66a3e;
 }
 
 .js .animate-box {
