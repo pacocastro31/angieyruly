@@ -323,6 +323,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+#qbootstrap-started {
+  background-size: cover; /* Mantiene la imagen siempre del mismo tamaño */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva */
+  background-position: center !important; /* Centra la imagen */
+  min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
+}
+
+
+#qbootstrap-countdown {
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
 .qbootstrap-cover {
   background-size: cover !important;
   background-position: center !important;
@@ -356,7 +370,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .qbootstrap-cover,
   .video-hero {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -1433,12 +1447,19 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border-bottom: none !important;
 }
+
+#qbootstrap-countdown {
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 .qbootstrap-nav-toggle i {
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 25px;
   height: 3px;
   color: #e66a3e;

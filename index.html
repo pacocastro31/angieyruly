@@ -69,8 +69,8 @@
 	            <li class="active"><a href="#" data-nav-section="home"><span>Inicio</span></a></li>
 	            <li><a href="#" data-nav-section="when-where"><span>Ubicación</span></a></li>
 	            <li><a href="#" data-nav-section="rsvp"><span>Confirmación</span></a></li>
-				<li><a href="#" data-nav-section="gifts"><span>Mesa de regalos</span></a></li>
 				<li><a href="#" data-nav-section="lodging"><span>Hospedaje</span></a></li>
+				<li><a href="#" data-nav-section="gifts"><span>Mesa de regalos</span></a></li>
 	            <li><a href="#" data-nav-section="recommendations"><span>Recomendaciones</span></a></li>
 	          </ul>
 	        </div>
@@ -105,7 +105,7 @@
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						
 						<h2>¡ Hola !</h2>
-						<p style="text-align: justify;">Bienvenidos a nuestra historia de amor. Aquí podrán encontrar todos los detalles sobre nuestro gran día, desde la fecha y el lugar hasta los pequeños momentos que hemos preparado con mucho cariño. Nos sentimos emocionados de contar con su presencia para celebrar este día tan especial, y agradecemos profundamente el amor y el apoyo que nos han brindado en este hermoso camino. ¡Esperamos que disfruten cada detalle de esta celebración tanto como nosotros!</p>
+						<p style="text-align: justify;">Bienvenidos a nuestra historia de amor. Aquí podrán encontrar todos los detalles sobre nuestro gran día, desde la fecha y el lugar, hasta los pequeños momentos que hemos preparado con mucho cariño. Nos sentimos emocionados de contar con su presencia para celebrar este día tan especial, y agradecemos profundamente el amor y el apoyo que nos han brindado en este hermoso camino. ¡Esperamos que disfruten cada detalle de esta celebración tanto como nosotros!</p>
 						<p><strong>Con amor, Ruly y Angie</strong></p>
 					</div>
 				</div>
@@ -113,14 +113,13 @@
 		</div>
 	</div>
 	
-	<div id="qbootstrap-countdown" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_2.jpg);" data-section="wedding-day">
+	<div id="qbootstrap-countdown" class="text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_2464.JPG);" data-section="wedding-day">
 		<div class="overlay"></div>
 		<div class="display-over">
 			<div class="container-fluid">
 				<div class="row animate-box">
 					<div class="col-md-12 section-heading text-center svg-sm colored">
 						<h2 class="">Every second brings us closer</h2>
-						<span class="datewed">Oct 18, 2025</span>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -136,6 +135,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<div id="qbootstrap-when-where" data-section="when-where">
 		<div class="container-fluid">
@@ -206,43 +206,179 @@
 			</div>
 		</div>
 	</div>
-
 	
+		<!-- Asegúrate de incluir Font Awesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-	<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
-		<div class="overlay"></div>
-		<div class="container-fluid">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-12 text-center section-heading svg-sm colored">
-						<h2>Confirma</h2>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">I am Attending</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="qbootstrap-started" class="qbootstrap-bg text-center" data-section="rsvp" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_21711.JPG);">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-12 text-center section-heading svg-sm colored">
+                    <h2>Confirmación</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row animate-box">
+            <div class="col-md-10 col-md-offset-1">
+                <form class="form-inline" id="guest-form">
+                    <div id="guest-list"></div>
+                    <p id="error-message" style="color: rgb(255, 255, 255); display: none;">Por favor, llena todos los campos antes de confirmar.</p>
+                    <div class="row">
+						<div class="col-md-9 text-center"  style="margin-bottom: 10px;">
+                            <a id="confirm-btn" href="#" target="_blank" class="btn btn-primary btn-block" disabled>
+                                Confirmar Asistencia
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center"  style="margin-bottom: 10px;">
+                            <button type="button" id="add-guest-btn" class="btn btn-primary btn-block">
+                                <i class="fas fa-user-plus"></i> Agregar invitado
+                            </button>
+                        </div>
+						
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const maxGuests = 6;
+    let guestCount = 0;
+
+    const guestList = document.getElementById("guest-list");
+    const confirmBtn = document.getElementById("confirm-btn");
+    const errorMessage = document.getElementById("error-message");
+    const addGuestBtn = document.getElementById("add-guest-btn");
+
+    function updateConfirmButton() {
+        let allFilled = true;
+        let validGuests = 0;
+
+        document.querySelectorAll(".guest-input").forEach((input) => {
+            const name = input.querySelector(".guest-name").value.trim();
+            const phone = input.querySelector(".guest-phone").value.trim();
+            if (name && phone) {
+                validGuests++;
+            } else {
+                allFilled = false;
+            }
+        });
+
+        if (validGuests > 0) {
+            confirmBtn.removeAttribute("disabled");
+            errorMessage.style.display = "none";
+        } else {
+            confirmBtn.setAttribute("disabled", "true");
+            errorMessage.style.display = "none";
+        }
+		confirmBtn.blur();
+		addGuestBtn.blur();
+    }
+
+    function generateWhatsAppLink() {
+        let message = `Confirmación de Asistencia - Boda de Ángela & Raúl\n\nHola,\n\nPor este medio confirmamos nuestra asistencia a la boda de Ángela & Raúl, que se llevará a cabo el 18 de octubre de 2025 en El Fuerte, Sinaloa.\n\nA continuación, te compartimos la lista de asistentes de nuestro grupo:\n\n`;
+
+        let validGuests = 0;
+
+        document.querySelectorAll(".guest-input").forEach((input, index) => {
+            const name = input.querySelector(".guest-name").value.trim();
+            const phone = input.querySelector(".guest-phone").value.trim();
+            if (name && phone) {
+                message += `${index + 1}. ${name} - ${phone}\n`;
+                validGuests++;
+            }
+        });
+
+        if (validGuests === guestCount && guestCount > 0) {
+            const encodedMessage = encodeURIComponent(message);
+            return `https://wa.me/528110456609?text=${encodedMessage}`;
+        } else {
+            return "";
+        }
+    }
+
+    function addGuest() {
+
+        if (guestCount < maxGuests) {
+            guestCount++;
+            const guestDiv = document.createElement("div");
+            guestDiv.classList.add("row", "guest-input");
+            guestDiv.innerHTML = `
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control guest-name" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control guest-phone" placeholder="Teléfono">
+                    </div>
+                </div>
+            `;
+            guestList.appendChild(guestDiv);
+
+			// <div class="col-md-3">
+			// 		<button type="button" class="btn btn-danger remove-guest">
+            //            <i class="fas fa-minus"></i>
+            //         </button>
+            //     </div>
+            // guestDiv.querySelector(".remove-guest").addEventListener("click", function () {
+            //     guestList.removeChild(guestDiv);
+            //     guestCount--;
+            //     updateConfirmButton();
+            // });
+
+            updateConfirmButton();
+        }
+    }
+
+    function addDefaultGuest() {
+        const defaultGuestDiv = document.createElement("div");
+        defaultGuestDiv.classList.add("row", "guest-input");
+        defaultGuestDiv.innerHTML = `
+            <div class="col-md-6 col-sm-2">
+                <div class="form-group">
+                    <input type="text" class="form-control guest-name" placeholder="Nombre">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-2">
+                <div class="form-group">
+                    <input type="text" class="form-control guest-phone" placeholder="Teléfono">
+                </div>
+            </div>
+        `;
+        guestList.appendChild(defaultGuestDiv);
+        guestCount++;
+
+        // defaultGuestDiv.querySelector(".remove-guest").addEventListener("click", function () {
+        //     guestList.removeChild(defaultGuestDiv);
+        //     guestCount--;
+        //     updateConfirmButton();
+        // });
+    }
+
+    confirmBtn.addEventListener("click", function (event) {
+		this.blur();
+        const whatsappLink = generateWhatsAppLink();
+
+        if (!whatsappLink) {
+            errorMessage.style.display = "block";
+            event.preventDefault();
+            return;
+        }
+
+        window.open(whatsappLink, '_blank');
+    });
+
+    addDefaultGuest();
+    addGuestBtn.addEventListener("click", addGuest);
+    updateConfirmButton();
+});
+</script>
 
 	<div id="qbootstrap-recommendations" data-section="recommendations">
 		<div class="container-fluid">
@@ -257,38 +393,45 @@
 			<div class="row row-bottom-padded-md">
 				<!-- Restaurants Section (50% width) -->
 				<div class="col-md-6 text-center animate-box">
-					<div class="wedding-events" style="padding: 30px; background: #f9f7e6; border-radius: 25px; margin-bottom: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+					<div class="wedding-events">
 						<div class="desc">
 							<h3>Restaurantes</h3>
-							<div class="row" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>Maukaa Coffee</strong></p>
-									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90fe6ce92e0db:0x686091a55e78ba62?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1" style="margin-bottom: 10px;">
+									<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>Maukaa Coffee</strong></p>
+										<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90fe6ce92e0db:0x686091a55e78ba62?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
+									</div>
 								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+								<div class="col-md-4 col-md-offset-1" style="margin-bottom: 10px;"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 									<p><strong>El Texano</strong></p>
 									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90fcdf48bbb45:0x26dc1b8b0895426a?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 " style="margin-bottom: 10px;"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 									<p><strong>La Galera</strong></p>
 									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e2f4f8c61bf:0x31e7b16517adc889?entry=s&sa=X&ved=2ahUKEwjEr-KrzPGLAxXiG9AFHVlHAZQQ4kB6BAgDEAA" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>Mansión Orrantia</strong></p>
-									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e203265d04f:0x719b7c493a4b8da?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+								</div></div>
+								<div class="col-md-4" style="margin-bottom: 10px;"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 									<p><strong>Casa Blanca</strong></p>
 									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90f9b843cdd3f:0x64f0dba38e9a3f0e?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+								</div></div>
+								<div class="col-md-4" style="margin-bottom: 10px;"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 									<p><strong>Tortas Bernardo</strong></p>
 									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e202dbfe097:0xfab7450729974051?entry=s&sa=X&ved=2ahUKEwiwks-c0PGLAxWEMNAFHfOsM-cQ4kB6BAgCEAA" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+								</div></div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1" style="margin-bottom: 10px;"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 									<p><strong>La Patrona</strong></p>
 									<p><a href="https://maps.app.goo.gl/eXQepf4DLxmhr74t5" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
-								</div>
+								</div></div>
+								<div class="col-md-4 col-md-offset-1"><div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+									<p><strong>Mansión Orrantia</strong></p>
+									<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e203265d04f:0x719b7c493a4b8da?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
+								</div></div>
 							</div>
 						</div>
 					</div>
@@ -296,25 +439,39 @@
 	
 				<!-- Makeup Section (50% width) -->
 				<div class="col-md-6 text-center animate-box">
-					<div class="wedding-events" style="padding: 30px; background: #f9f7e6; border-radius: 25px; margin-bottom: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+					<div class="wedding-events">
 						<div class="desc">
 							<h3>Maquillaje</h3>
-							<div class="row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>Ana Aragón</strong></p>
-									<p><a href="https://instagram.com/anaaragonmakeup" target="_blank">@anaaragonmakeup</a></p>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1" style="margin-bottom: 10px;">
+									<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>Ana Aragón</strong></p>
+										<p><a href="https://instagram.com/anaaragonmakeup" target="_blank">@anaaragonmakeup</a></p>
+									</div>
 								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>Yacemi Anaya</strong></p>
-									<p><a href="https://www.facebook.com/makeupyacemi" target="_blank">FB: makeupyacemi</a></p>
+								
+								<div class="col-md-4 col-md-offset-2" style="margin-bottom: 10px;">
+									<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>Yacemi Anaya</strong></p>
+										<p><a href="https://www.facebook.com/MarbetAnaya" target="_blank">FB: makeupyacemi</a></p>
+									</div>
 								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>Melissa Fernández</strong></p>
-									<p><a href="https://instagram.com/maquillaje.melissafdez" target="_blank">@maquillaje.melissafdez</a></p>
+								
+								
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1" style="margin-bottom: 10px;">
+									<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>Melissa Fernández</strong></p>
+										<p><a href="https://instagram.com/maquillaje.melissafdez" target="_blank">@maquillaje.melissafdez</a></p>
+									</div>
 								</div>
-								<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-									<p><strong>The Glam House</strong></p>
-									<p><a href="https://instagram.com/theglamhouse.27" target="_blank">@theglamhouse.27</a></p>
+								
+								<div class="col-md-4 col-md-offset-2" style="margin-bottom: 10px;">
+									<div class="card" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>The Glam House</strong></p>
+										<p><a href="https://instagram.com/theglamhouse.27" target="_blank">@theglamhouse.27</a></p>
+									</div>
 								</div>
 							</div>
 						</div>
