@@ -398,6 +398,23 @@ body {
     padding: 3em 0;
   }
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  align-items: center;    /* Center them horizontally */
+  text-align: center;     /* Center text inside each element */
+} 
 .qbootstrap-cover .display-t,
 .video-hero .display-t {
   display: table;
