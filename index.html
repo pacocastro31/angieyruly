@@ -299,12 +299,12 @@
                     <div id="guest-list"></div>
                     <p id="error-message" style="color: rgb(255, 255, 255); display: none;">Por favor, llena todos los campos antes de confirmar.</p>
                     <div class="row">
-						<div class="col-md-9 text-center"  style="margin-bottom: 10px;">
+						<div class="col-md-12 text-center"  style="margin-bottom: 10px;">
                             <a id="confirm-btn" href="#" target="_blank" class="btn btn-primary btn-block" style="display: flex; align-items: center; justify-content: center; ">
                                 Confirmar Asistencia
                             </a>
                         </div>
-                        <div class="col-md-3 text-center"  style="margin-bottom: 10px;">
+                        <div class="col-md-3 text-center"  style="margin-bottom: 10px; display: none;">
                             <button type="button" id="add-guest-btn" class="btn btn-primary btn-block">
                                 <i class="fas fa-user-plus"></i> Agregar invitado
                             </button>
@@ -379,12 +379,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const guestDiv = document.createElement("div");
             guestDiv.classList.add("row", "guest-input");
             guestDiv.innerHTML = `
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="form-group">
                         <input type="text" class="form-control guest-name" placeholder="Nombre">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="form-group">
                         <input type="text" class="form-control guest-phone" placeholder="Teléfono">
                     </div>
@@ -468,16 +468,14 @@ document.addEventListener("DOMContentLoaded", function () {
 						<div class="desc">
 							<h3>Restaurantes</h3>
 							<div class="row">
-								<div class="col-md-4 col-md-offset-2" style="margin-bottom: 10px;">
-									<div class="card">
-										<p><strong>Maukaa Coffee</strong></p>
-										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/maukaacoffee/" data-instgrm-version="13">
-											<a href="https://www.instagram.com/maukaacoffee/"></a>
+								<div class="col-md-4 col-md-offset-2">
+									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+										<p><strong>Mansión de los Orrantia</strong></p>
+										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/mansiondelosorrantia/" data-instgrm-version="13">
+											<a href="https://www.instagram.com/mansiondelosorrantia/"></a>
 										</blockquote>
 										<script async src="https://www.instagram.com/embed.js"></script>
-										<p>
-											<a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90fe6ce92e0db:0x686091a55e78ba62?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
-										</p>
+										<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e203265d04f:0x719b7c493a4b8da?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
 									</div>
 								</div>
 								<div class="col-md-4" style="margin-bottom: 10px;">
@@ -495,14 +493,14 @@ document.addEventListener("DOMContentLoaded", function () {
 							</div>
 
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-md-4" style="margin-bottom: 10px;">
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-										<p><strong>Mansión de los Orrantia</strong></p>
-										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/mansiondelosorrantia/" data-instgrm-version="13">
-											<a href="https://www.instagram.com/mansiondelosorrantia/"></a>
+										<p><strong>La Patrona</strong></p>
+										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/lapatrona_alitas/" data-instgrm-version="13">
+											<a href="https://www.instagram.com/lapatrona_alitas/"></a>
 										</blockquote>
 										<script async src="https://www.instagram.com/embed.js"></script>
-										<p><a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90e203265d04f:0x719b7c493a4b8da?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
+										<p><a href="https://maps.app.goo.gl/eXQepf4DLxmhr74t5" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
 									</div>
 								</div>
 								<div class="col-md-4" style="margin-bottom: 10px;">
@@ -526,16 +524,17 @@ document.addEventListener("DOMContentLoaded", function () {
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-4 col-md-offset-2" style="margin-bottom: 10px;">
-									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-										<p><strong>La Patrona</strong></p>
-										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/lapatrona_alitas/" data-instgrm-version="13">
-											<a href="https://www.instagram.com/lapatrona_alitas/"></a>
+									<div class="card">
+										<p><strong>Maukaa Coffee</strong></p>
+										<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/maukaacoffee/" data-instgrm-version="13">
+											<a href="https://www.instagram.com/maukaacoffee/"></a>
 										</blockquote>
 										<script async src="https://www.instagram.com/embed.js"></script>
-										<p><a href="https://maps.app.goo.gl/eXQepf4DLxmhr74t5" target="_blank" class="btn btn-primary btn-sm">Ubicación</a></p>
+										<p>
+											<a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x86b90fe6ce92e0db:0x686091a55e78ba62?entry=s&sa=X&ved=1t:8290&hl=es-MX&ictx=111" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
+										</p>
 									</div>
 								</div>
 								<div class="col-md-4" style="margin-bottom: 10px;">
