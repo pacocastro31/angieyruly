@@ -57,7 +57,7 @@
 	</head>
 	<body>
 	<header role="banner" id="qbootstrap-header">
-		<div class="container-fluid">
+		<div class="container">
 			<!-- <div class="row"> -->
 		    <nav class="navbar navbar-default">
 	        <div class="navbar-header">
@@ -82,10 +82,10 @@
 	<div class="qbootstrap-hero" data-section="home">
 		<div class="qbootstrap-overlay"></div>
 		<div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5"
-		style="background-image: url(images/IMG_2137.JPG);">
+			style="background-image: url(images/IMG_2137.webp);">
 			<div class="display-t">
 				<div class="display-tc">
-					<div class="container-fluid">
+					<div class="container">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="animate-box svg-sm colored oooh-baby-regular">
 								<h2>Ángela &amp; Raúl</h2>
@@ -97,9 +97,11 @@
 			</div>
 		</div>
 	</div>
+	
+	
 
 	<div id="qbootstrap-couple" class="qbootstrap-section-gray">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 animate-box">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
@@ -179,7 +181,7 @@
 	</div>
 	
 
-	<div id="qbootstrap-countdown" class="text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_24644.JPG);" data-section="wedding-day">
+	<div id="qbootstrap-countdown" class="text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_24644.webp);" data-section="wedding-day">
 		<div class="overlay"></div>
 		<div class="display-over">
 			<div class="container-fluid">
@@ -278,51 +280,57 @@
 	
 		<!-- Asegúrate de incluir Font Awesome para los íconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<div id="qbootstrap-started" class="qbootstrap-bg text-center" data-section="rsvp" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_21711.JPG);">
+<div id="qbootstrap-started" class="qbootstrap-bg text-center" data-section="rsvp" data-stellar-background-ratio="0.5" style="background-image: url(images/IMG_21711.webp);">
     <div class="overlay"></div>
-    <div class="container"> <!-- Cambié container-fluid por container -->
-        <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 col-xs-12 text-center"> <!-- Añadí col-xs-12 -->
-                <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <h2>Confirmación</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row animate-box">
-            <div class="col-md-10 col-md-offset-1 col-xs-12"> <!-- Asegurar que el formulario también está bien centrado -->
-                <form class="form-inline" id="guest-form">
-                    <div id="guest-list"></div>
-                    <p id="error-message" style="color: rgb(255, 255, 255); display: none;">Por favor, llena todos los campos antes de confirmar.</p>
+    <div class="qbootstrap-cover text-center">
+        <div class="display-t">
+            <div class="display-tc">
+                <div class="container">
                     <div class="row">
-						<div class="col-md-12 col-xs-12 text-center" style="margin-bottom: 10px;">
+                        <div class="col-xs-12">
+                            <div class="animate-box svg-sm colored">
+                                <h2>Confirmación</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario -->
+                    <div class="row animate-box">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control guest-name" placeholder="Nombre">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row animate-box">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control guest-phone" placeholder="Teléfono">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row animate-box">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
                             <a id="confirm-btn" href="#" target="_blank" class="btn btn-primary btn-block">
                                 Confirmar Asistencia
                             </a>
                         </div>
-                        <div class="col-md-3 text-center" style="margin-bottom: 10px; display: none;">
-                            <button type="button" id="add-guest-btn" class="btn btn-primary btn-block">
-                                <i class="fas fa-user-plus"></i> Agregar invitado
-                            </button>
-                        </div>
                     </div>
-                </form>
+                    <!-- Fin Formulario -->
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const maxGuests = 6;
-    let guestCount = 0;
-
-    const guestList = document.getElementById("guest-list");
     const confirmBtn = document.getElementById("confirm-btn");
     const errorMessage = document.getElementById("error-message");
-    const addGuestBtn = document.getElementById("add-guest-btn");
 
+    // Función para actualizar el botón de confirmar
     function updateConfirmButton() {
         let allFilled = true;
         let validGuests = 0;
@@ -342,10 +350,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             errorMessage.style.display = "none";
         }
-		confirmBtn.blur();
-		addGuestBtn.blur();
+        confirmBtn.blur();
     }
 
+    // Genera el enlace de WhatsApp
     function generateWhatsAppLink() {
         let message = `Confirmación de Asistencia - Boda de Ángela & Raúl\n\nHola,\n\nPor este medio confirmamos nuestra asistencia a la boda de Ángela & Raúl, que se llevará a cabo el 18 de octubre de 2025 en El Fuerte, Sinaloa.\n\nA continuación, te compartimos la lista de asistentes de nuestro grupo:\n\n`;
 
@@ -360,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        if (validGuests === guestCount && guestCount > 0) {
+        if (validGuests === 1) {  // Solo un invitado
             const encodedMessage = encodeURIComponent(message);
             return `https://wa.me/528110456609?text=${encodedMessage}`;
         } else {
@@ -368,68 +376,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function addGuest() {
-
-        if (guestCount < maxGuests) {
-            guestCount++;
-            const guestDiv = document.createElement("div");
-            guestDiv.classList.add("row", "guest-input");
-            guestDiv.innerHTML = `
-                <div class="col-md-6 col-xs-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control guest-name" placeholder="Nombre">
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control guest-phone" placeholder="Teléfono">
-                    </div>
-                </div>
-            `;
-            guestList.appendChild(guestDiv);
-
-			// <div class="col-md-3">
-			// 		<button type="button" class="btn btn-danger remove-guest">
-            //            <i class="fas fa-minus"></i>
-            //         </button>
-            //     </div>
-            // guestDiv.querySelector(".remove-guest").addEventListener("click", function () {
-            //     guestList.removeChild(guestDiv);
-            //     guestCount--;
-            //     updateConfirmButton();
-            // });
-
-            updateConfirmButton();
-        }
-    }
-
-    function addDefaultGuest() {
-        const defaultGuestDiv = document.createElement("div");
-        defaultGuestDiv.classList.add("row", "guest-input");
-        defaultGuestDiv.innerHTML = `
-            <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    <input type="text" class="form-control guest-name" placeholder="Nombre">
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    <input type="text" class="form-control guest-phone" placeholder="Teléfono">
-                </div>
-            </div>
-        `;
-        guestList.appendChild(defaultGuestDiv);
-        guestCount++;
-
-        // defaultGuestDiv.querySelector(".remove-guest").addEventListener("click", function () {
-        //     guestList.removeChild(defaultGuestDiv);
-        //     guestCount--;
-        //     updateConfirmButton();
-        // });
-    }
-
+    // Confirmar asistencia al hacer clic en el botón
     confirmBtn.addEventListener("click", function (event) {
-		this.blur();
+        this.blur();
         const whatsappLink = generateWhatsAppLink();
 
         if (!whatsappLink) {
@@ -441,12 +390,9 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open(whatsappLink, '_blank');
     });
 
-    addDefaultGuest();
-    addGuestBtn.addEventListener("click", addGuest);
     updateConfirmButton();
 });
 </script>
-
 <div id="qbootstrap-recommendations" data-section="recommendations">
 	<div class="container">
 		<div class="row animate-box">
@@ -533,7 +479,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				<div class="col-md-4" style="margin-bottom: 10px;">
 				  <div class="card">
 					<p><strong>La Galera</strong></p>
-					<div class="fb-page" data-href="https://www.facebook.com/RestaurantPalapalaGalera" data-tabs="timeline" data-width="340" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+					<div class="fb-page" style="margin-bottom: 10px;" data-href="https://www.facebook.com/RestaurantPalapalaGalera" data-tabs="timeline" data-width="340" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 					<p><a href="https://maps.google.com/" class="btn btn-primary btn-sm">Ubicación</a></p>
 				  </div>
 				</div>
@@ -600,11 +546,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	
 	<div id="qbootstrap-countdown" class="text-center" data-stellar-background-ratio="0.5"
-	style="background-image: url(images/vecteezy_close-up-of-present-box-with-flowers_46007889.jpeg);"
+	style="background-image: url(images/vecteezy_close-up-of-present-box-with-flowers_46007889.webp);"
 	data-section="gifts">
 	<div class="overlay"></div>
 	<div class="display-over">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-12 section-heading text-center svg-sm colored">
 					<h2 class="">Mesa de Regalos</h2>
@@ -703,104 +649,104 @@ document.addEventListener("DOMContentLoaded", function () {
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-xs-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_0218.jpeg"><img src="images/gallery/IMG_0218.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_0218.webp"><img src="images/gallery/IMG_0218.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_0273.jpeg"><img src="images/gallery/IMG_0273.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_0273.webp"><img src="images/gallery/IMG_0273.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_0436.jpeg"><img src="images/gallery/IMG_0436.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_0436.webp"><img src="images/gallery/IMG_0436.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_0591.jpeg"><img src="images/gallery/IMG_0591.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_0591.webp"><img src="images/gallery/IMG_0591.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_1144.jpeg"><img src="images/gallery/IMG_1144.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_1144.webp"><img src="images/gallery/IMG_1144.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
                 <div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_9563.jpeg"><img src="images/gallery/IMG_9563.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_9563.webp"><img src="images/gallery/IMG_9563.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
                 <div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_7102.jpeg"><img src="images/gallery/IMG_7102.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_7102.webp"><img src="images/gallery/IMG_7102.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 			</div>
 			<div class="col-md-3 col-xs-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_2137.JPG"><img src="images/gallery/IMG_2137.JPG" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_2137.webp"><img src="images/gallery/IMG_2137.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_1537.jpeg"><img src="images/gallery/IMG_1537.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_1537.webp"><img src="images/gallery/IMG_1537.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_2464.JPG"><img src="images/gallery/IMG_2464.JPG" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_2464.webp"><img src="images/gallery/IMG_2464.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_2739.jpeg"><img src="images/gallery/IMG_2739.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_2739.webp"><img src="images/gallery/IMG_2739.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_2171.JPG"><img src="images/gallery/IMG_2171.JPG" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_2171.webp"><img src="images/gallery/IMG_2171.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_3099.jpeg"><img src="images/gallery/IMG_3099.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_3099.webp"><img src="images/gallery/IMG_3099.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
                 <div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_8814.jpeg"><img src="images/gallery/IMG_8814.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_8814.webp"><img src="images/gallery/IMG_8814.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_8519.jpeg"><img src="images/gallery/IMG_8519.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_8519.webp"><img src="images/gallery/IMG_8519.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 			</div>
 			<div class="col-md-3 col-xs-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_3200.jpeg"><img src="images/gallery/IMG_3200.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_3200.webp"><img src="images/gallery/IMG_3200.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_4873.jpeg"><img src="images/gallery/IMG_4873.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_4873.webp"><img src="images/gallery/IMG_4873.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_4971.jpeg"><img src="images/gallery/IMG_4971.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_4971.webp"><img src="images/gallery/IMG_4971.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_5241.jpeg"><img src="images/gallery/IMG_5241.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_5241.webp"><img src="images/gallery/IMG_5241.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_5361.jpeg"><img src="images/gallery/IMG_5361.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_5361.webp"><img src="images/gallery/IMG_5361.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
                 <div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_7097.jpeg"><img src="images/gallery/IMG_7097.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_7097.webp"><img src="images/gallery/IMG_7097.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 				<div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_8391.jpeg"><img src="images/gallery/IMG_8391.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_8391.webp"><img src="images/gallery/IMG_8391.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 			</div>
 			<div class="col-md-3 col-xs-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_5555.jpeg"><img src="images/gallery/IMG_5555.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_5555.webp"><img src="images/gallery/IMG_5555.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_5968.jpeg"><img src="images/gallery/IMG_5968.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_5968.webp"><img src="images/gallery/IMG_5968.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/IMG_6709.jpeg"><img src="images/gallery/IMG_6709.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/IMG_6709.webp"><img src="images/gallery/IMG_6709.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/gallery/SAM_4823.jpeg"><img src="images/gallery/SAM_4823.jpeg" class="img-responsive" alt="Gallery Image"></a>
+					<a class="gallery-img image-popup" href="images/gallery/SAM_4823.webp"><img src="images/gallery/SAM_4823.webp" class="img-responsive" alt="Gallery Image"></a>
 				</div>
 				<div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_6194.jpeg"><img src="images/gallery/IMG_6194.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_6194.webp"><img src="images/gallery/IMG_6194.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
                 <div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_7085.jpeg"><img src="images/gallery/IMG_7085.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_7085.webp"><img src="images/gallery/IMG_7085.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 				<div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_9528.jpeg"><img src="images/gallery/IMG_9528.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_9528.webp"><img src="images/gallery/IMG_9528.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 				<div class="gallery animate-box">
-                    <a class="gallery-img image-popup" href="images/gallery/IMG_7220.jpeg"><img src="images/gallery/IMG_7220.jpeg" class="img-responsive" alt="Gallery Image"></a>
+                    <a class="gallery-img image-popup" href="images/gallery/IMG_7220.webp"><img src="images/gallery/IMG_7220.webp" class="img-responsive" alt="Gallery Image"></a>
                 </div>
 			</div>
 		</div>

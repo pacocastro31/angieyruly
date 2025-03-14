@@ -46,3 +46,4 @@ Desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
+.saass-cache

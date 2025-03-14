@@ -373,6 +373,10 @@ body {
     height: 700px;
   }
 }
+body {
+  overflow-x: hidden !important;
+}
+
 
 .qbootstrap-overlay {
   position: absolute !important;
@@ -769,13 +773,14 @@ body {
 #qbootstrap-couple .amp-center .colored .svg {
   fill: #e66a3e;
 }
-
+body {
+  overflow-x: hidden;
+}
 .qbootstrap-bg {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
 }
-
 #qbootstrap-countdown {
   background-size: cover;
   position: relative;
