@@ -1554,8 +1554,30 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  position: relative;
 }
 
+@media (max-width: 768px) {
+  #qbootstrap-countdown {
+    background-attachment: scroll; /* Elimina el fixed */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Simula el efecto parallax en móvil */
+  #qbootstrap-countdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/IMG_21711.webp'); /* Usa la misma imagen */
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+  }
+}
 .qbootstrap-nav-toggle i {
   position: relative;
   display: -moz-inline-stack;
