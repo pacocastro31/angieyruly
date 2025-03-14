@@ -423,6 +423,62 @@ body {
   position: relative;
   z-index: 2;
 }
+.section-heading h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.btn-block {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .fb-page {
+    width: 320px !important;  /* Ajuste más pequeño para móviles */
+    max-width: 100% !important; /* No permite desbordamiento */
+  }
+}
+
+/* Asegura que las tarjetas tengan la misma altura mínima */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+.fb-page {
+  width: 100% !important; /* Asegura que la página de Facebook ocupe el 100% de ancho */
+  height: 300px; /* Puedes ajustar la altura de la página de Facebook según lo que necesites */
+}
+
+.card .btn {
+  position: absolute;
+  bottom: 20px; /* Establece el espacio entre el final de la tarjeta y el botón */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+}
+.row .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Asegura que el contenido ocupe toda la altura de la columna */
+}
+
+.row .col-md-4 .card p {
+  flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+  .row {
+    display: block;
+  }
+
+  .row .col-md-4 {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .qbootstrap-cover .display-t,
   .video-hero .display-t {
