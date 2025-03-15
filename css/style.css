@@ -354,6 +354,14 @@ body {
   min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
 }
 
+@media (max-width: 768px) {
+  #qbootstrap-started {
+    background-size: contain; /* Asegura que la imagen se ajuste completamente en pantallas pequeñas */
+    background-position: top center; /* Centra la imagen desde la parte superior en pantallas pequeñas */
+  }
+}
+
+
 
 #qbootstrap-countdown {
   background-position: center center !important;
