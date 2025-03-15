@@ -3141,6 +3141,7 @@ output {
   line-height: 1.42857;
   color: #555555;
   background-color: #fff;
+  background: white;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
