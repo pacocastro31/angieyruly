@@ -1825,7 +1825,9 @@ body {
     padding-bottom: 2em;
   }
 }
-
+.icon-phone {
+  margin-bottom: 15px;
+}
 .form-control {
   box-shadow: none;
   background: white;

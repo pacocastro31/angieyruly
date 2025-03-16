@@ -223,24 +223,24 @@
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel Posada Hidalgo</strong></p>
 										<p>5 de Mayo #101, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526988931194" target="_blank"> 698 893 1194</a></div>
 										<p><a href="https://hotelposadadelhidalgo.com" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526988931194" target="_blank"> 698 893 1194</a></span>
 									</div>
 								</div>
 								<div class="col-md-4 col-xs-12" style="margin-bottom: 10px;">
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel Santa Elena</strong></p>
 										<p>Antonio Rosales #108, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526988931582" target="_blank"> 698 893 1582</a></div>
 										<p><a href="https://www.hotelsantaelena.mx" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526988931582" target="_blank"> 698 893 1582</a></span>
 									</div>
 								</div>
 								<div class="col-md-4 col-xs-12" style="margin-bottom: 10px;">
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel Mansión Serrano</strong></p>
 										<p>Zaragoza #200, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526988930505" target="_blank"> 698 893 0505</a></div>
 										<p><a href="https://mansionserrano.com" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526988930505" target="_blank"> 698 893 0505</a></span>
 									</div>
 								</div>
 							</div>
@@ -249,24 +249,24 @@
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel Rio Vista</strong></p>
 										<p>Progreso S/N, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526981042647" target="_blank"> 698 104 2647</a></div>
 										<p><a href="https://www.instagram.com/hotel_rio_vista/?hl=es" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526981042647" target="_blank"> 698 104 2647</a></span>
 									</div>
 								</div>
 								<div class="col-md-4 col-xs-12" style="margin-bottom: 10px;">
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel Torres Del Fuerte</strong></p>
 										<p>Rodolfo G Robles #102, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526988931975" target="_blank"> 698 893 1975</a></div>
 										<p><a href="https://www.instagram.com/hoteltorres/?hl=es" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526988931975" target="_blank"> 698 893 1975</a></span>
 									</div>
 								</div>
 								<div class="col-md-4 col-xs-12" style="margin-bottom: 10px;">
 									<div class="card" style="background: white; padding: 20px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
 										<p><strong>Hotel La Choza</strong></p>
 										<p>Zaragoza #200, Centro Histórico, El Fuerte, Sin.</p>
+										<div class="icon-phone"><a href="tel:+526988931274" target="_blank"> 698 893 1274</a></div>
 										<p><a href="https://www.hotellachoza.com/contacto" target="_blank" class="btn btn-primary btn-sm">Reservaciones</a></p>
-										<span class="icon-phone"><a href="tel:+526988931274" target="_blank"> 698 893 1274</a></span>
 									</div>
 								</div>
 							</div> <!-- Cierre de row -->
@@ -307,7 +307,7 @@
                     </div>
 					<div class="row">
 						<div class="col-xs-12 col-md-6 col-md-offset-3">
-							<p id="error-message" style="color: white;" display: none;">Por favor, llena todos los campos antes de confirmar.</p>
+							<p id="error-message" style="color: white; display: none;">Por favor, llena todos los campos antes de confirmar.</p>
 						</div>
 					</div>
                     <div class="row animate-box">
@@ -329,50 +329,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmBtn = document.getElementById("confirm-btn");
     const errorMessage = document.getElementById("error-message");
 
-    // Función para actualizar el botón de confirmar
-    function updateConfirmButton() {
-        let allFilled = true;
-        let validGuests = 0;
-
-        document.querySelectorAll(".guest-input").forEach((input) => {
-            const name = input.querySelector(".guest-name").value.trim();
-            const phone = input.querySelector(".guest-phone").value.trim();
-            if (name && phone) {
-                validGuests++;
-            } else {
-                allFilled = false;
-            }
-        });
-
-        if (validGuests > 0) {
-            errorMessage.style.display = "none";
-        } else {
-            errorMessage.style.display = "none";
-        }
-        confirmBtn.blur();
-    }
-
     // Genera el enlace de WhatsApp
     function generateWhatsAppLink() {
-        let message = `Confirmación de Asistencia - Boda de Ángela & Raúl\n\nHola,\n\nPor este medio confirmamos nuestra asistencia a la boda de Ángela & Raúl, que se llevará a cabo el 18 de octubre de 2025 en El Fuerte, Sinaloa.\n\nA continuación, te compartimos la lista de asistentes de nuestro grupo:\n\n`;
+        let message = `Confirmación de Asistencia - Boda de Ángela & Raúl\n\nHola,\n\nPor este medio confirmo mi asistencia a la boda de Ángela & Raúl, que se llevará a cabo el 18 de octubre de 2025 en El Fuerte, Sinaloa.\n\n Atte:`;
 
-        let validGuests = 0;
+		const name = document.querySelector(".guest-name").value.trim();
+		const phone = document.querySelector(".guest-phone").value.trim();
+		if (name && phone) {
+			message += `${name} - ${phone}\n`;
+		}
 
-        document.querySelectorAll(".guest-input").forEach((input, index) => {
-            const name = input.querySelector(".guest-name").value.trim();
-            const phone = input.querySelector(".guest-phone").value.trim();
-            if (name && phone) {
-                message += `${index + 1}. ${name} - ${phone}\n`;
-                validGuests++;
-            }
-        });
-
-        if (validGuests === 1) {  // Solo un invitado
+		if (name && phone && phone.length == 10) {
             const encodedMessage = encodeURIComponent(message);
             return `https://wa.me/528110456609?text=${encodedMessage}`;
-        } else {
-            return "";
-        }
+        } 
+
+		return null;
     }
 
     // Confirmar asistencia al hacer clic en el botón
@@ -384,12 +356,10 @@ document.addEventListener("DOMContentLoaded", function () {
             errorMessage.style.display = "block";
             event.preventDefault();
             return;
-        }
-
-        window.open(whatsappLink, '_blank');
+        } else {
+			window.open(whatsappLink, '_blank');
+		}
     });
-
-    updateConfirmButton();
 });
 </script>
 <div id="qbootstrap-recommendations" data-section="recommendations">
